@@ -86,7 +86,7 @@ __Question 4__
 Implement the Q-learning algorithm.
 
 
-## Template description
+## Code structure
 
 The only files we have action on are: agent.py and main.py.
 
@@ -112,3 +112,8 @@ It also accepts a few command-line arguments:
 The running of your agent follows a general procedure that will be shared for all later practicals:
 * The environment generates an observation
 * This observation is provided to your agent via the act method which chooses an action
+
+
+## Solution:
+
+* TO DO *
