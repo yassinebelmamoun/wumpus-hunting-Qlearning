@@ -97,15 +97,18 @@ class Environment:
     def torchlight(self, action):
         if self.rem_charges <= 0:
             return False
-        self.rem_charges -= 1
         (x,y) = self.agent
         if action == ACT_TORCH_UP:
+            self.rem_charges -= 1
             return self.kill_wumpus_at((x, y+1))
         elif action == ACT_TORCH_DOWN:
+            self.rem_charges -= 1
             return self.kill_wumpus_at((x, y-1))
         elif action == ACT_TORCH_LEFT:
+            self.rem_charges -= 1
             return self.kill_wumpus_at((x-1, y))
         elif action == ACT_TORCH_RIGHT:
+            self.rem_charges -= 1
             return self.kill_wumpus_at((x+1, y))
         else:
             return False

@@ -84,7 +84,8 @@ class BatchRunner:
         cum_avg_reward = 0.0
         for g in range(1, games+1):
             avg_reward = self.game(max_iter)
-            cum_avg_reward += avg_reward
+            if g > 9*games/10:
+                cum_avg_reward += avg_reward
             if self.verbose:
                 print("Simulation game {}:".format(g))
                 print(" ->            average reward: {}".format(avg_reward))
